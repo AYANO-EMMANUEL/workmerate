@@ -6,7 +6,7 @@
   --color-dark-green: #4f6f2f;
   --color-lime-accent: #dcee60;
   --color-cream-bg: #f9f9f4;
-  --color-yellow-cta: #eff69e;
+  --color-yellow-cta: #f0f4a4; /* Slightly lighter yellow for this specific CTA */
   --color-border: #eeeeee;
 }
 
@@ -149,33 +149,29 @@ img {
   gap: 10px;
 }
 
-/* --- 1. Hero Section --- */
-.capabilities-bg {
-    background: url("./assets/pricing-bg-3.png") no-repeat center/cover;
-}
-.hero-finance {
-  background: url("./assets/green-lime-half-bg.png") no-repeat center/cover;
+/* --- 1. Hero Section (Project Management) --- */
+.hero-project {
+  background: url("./assets/orange-lime-full-bg.png") no-repeat center/cover;
   position: relative;
   padding: 100px 0;
   overflow: hidden;
 }
-.hero-gradient-vertical {
+.hero-gradient-project {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
-  width: 60%;
-  /* Creating the vertical stripes/curtain effect from the image */
+  width: 50%;
+  /* Gradient: Cream -> Orange/Rust */
   background: linear-gradient(
     90deg,
-    rgba(240, 242, 235, 0) 0%,
-    rgba(220, 238, 96, 0.1) 20%,
-    rgba(220, 238, 96, 0.3) 40%,
-    rgba(220, 238, 96, 0.5) 60%,
-    rgba(220, 238, 96, 0.8) 80%,
-    rgba(220, 238, 96, 1) 100%
+    rgba(253, 252, 248, 0) 0%,
+    rgba(215, 126, 75, 0.2) 20%,
+    rgba(215, 126, 75, 0.6) 60%,
+    rgba(215, 126, 75, 1) 100%
   );
   z-index: 0;
+  pointer-events: none;
 }
 .hero-content {
   max-width: 600px;
@@ -226,17 +222,24 @@ h1 {
   color: #111;
 }
 
-/* --- 2 & 5. Intro & Integration (Equal Height Logic) --- */
+/* --- 2 & 5. Intro & Integration (EQUAL HEIGHT LOGIC) --- */
 .equal-height-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: stretch; /* Forces equal height */
+  align-items: stretch; /* Forces equal height columns */
 }
+.equal-height-row.reverse {
+  direction: rtl; /* Swaps visual order */
+}
+.equal-height-row.reverse > * {
+  direction: ltr; /* Fixes text direction inside swapped columns */
+}
+
 .text-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* Vertically centers text content */
 }
 .text-content h2 {
   font-size: 32px;
@@ -279,10 +282,10 @@ h1 {
   border-radius: 12px;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Key for filling the height */
+  object-fit: cover; /* Key: Crops image to fill container height */
 }
 
-/* --- 3. Core Capabilities (Horizontal Scroll) --- */
+/* --- 3. Core Capabilities --- */
 .capabilities-layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -496,14 +499,15 @@ h1 {
     display: flex;
   }
 
-  .equal-height-row {
+  .equal-height-row,
+  .equal-height-row.reverse {
     grid-template-columns: 1fr;
     gap: 30px;
+    direction: ltr;
   }
   .image-content {
     height: auto;
-    /* aspect-ratio: 16/9; */
-  } /* Reset height for mobile stack */
+  } /* Reset image aspect for mobile */
 
   .capabilities-layout {
     grid-template-columns: 1fr;

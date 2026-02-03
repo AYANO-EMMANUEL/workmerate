@@ -151,10 +151,10 @@ img {
 
 /* --- 1. Hero Section --- */
 .capabilities-bg {
-    background: url("./assets/pricing-bg-3.png") no-repeat center/cover;
+    background: url("./assets/pricing-bg-3.png");
 }
 .hero-finance {
-  background: url("./assets/green-lime-half-bg.png") no-repeat center/cover;
+  background: url("./assets/green-lime-full-bg.png") no-repeat center/cover;
   position: relative;
   padding: 100px 0;
   overflow: hidden;
@@ -502,7 +502,7 @@ h1 {
   }
   .image-content {
     height: auto;
-    /* aspect-ratio: 16/9; */
+    aspect-ratio: 16/9;
   } /* Reset height for mobile stack */
 
   .capabilities-layout {
