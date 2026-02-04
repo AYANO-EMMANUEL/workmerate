@@ -694,16 +694,7 @@ p {
   display: flex;
   gap: 4px;
 }
-.ai-logo {
-  position: absolute;
-  width: 100%;
-  right: 0;
-  img {
-    position: absolute;
-    right: -35px;
-    top: -130px;
-  }
-}
+
 .footer-top {
   display: grid;
   grid-template-columns: minmax(240px, 340px) 1fr;
@@ -938,38 +929,9 @@ hr {
     width: 100%;
   }
   .footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "logos ai"
-      "copy copy";
-    align-items: center;
-    gap: 16px 12px;
-  }
-  .footer-bottom .badges {
-    display: contents;
-  }
-  .footer-bottom .brand-logos {
-    grid-area: logos;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-  .footer-bottom .badges p {
-    grid-area: copy;
-    text-align: center;
-    width: 100%;
-  }
-  .footer-bottom .ai-logo {
-    grid-area: ai;
-    position: static;
-    width: auto;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .footer-bottom .ai-logo img {
-    position: static;
-    max-width: none;
-    height: auto;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
   }
   .chat-bubble {
     align-self: flex-end;
