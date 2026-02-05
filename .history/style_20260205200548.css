@@ -42,7 +42,7 @@
     --font-size-body-xlarge-mobile: 16px;
     --font-size-body-large-mobile: 15px;
     --font-size-body-medium-mobile: 14px;
-    --font-size-button-mobile: clamp(1rem, -0.125rem + 2vw, 1.5rem); 
+    --font-size-button-mobile: clamp(1.5rem, -0.125rem + 2vw, 1rem); 
     
     /* Line Heights */
     --line-height-display: 56px;
