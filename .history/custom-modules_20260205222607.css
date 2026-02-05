@@ -4,10 +4,10 @@
   --color-text-main: #111;
   --color-text-light: #555;
   --color-dark-green: #4f6f2f;
-  --color-darker-green: #384e20;
-  --color-lime-accent: #dcee60;
-  --color-cream-bg: #f9f9f4;
+  --color-lime-accent: #ebf2af;
+  --color-yellow-card: #f4f8d3; /* Light yellow background for capability cards */
   --color-yellow-cta: #eff69e;
+  --color-cream-bg: #f0f2eb;
   --color-border: #eeeeee;
 }
 
@@ -52,9 +52,6 @@ img {
 }
 .mb-6 {
   margin-bottom: 24px;
-}
-.mt-4 {
-  margin-top: 16px;
 }
 
 /* --- Navigation --- */
@@ -156,29 +153,23 @@ img {
   gap: 10px;
 }
 
-/* --- 1. Hero Section (State IRS) --- */
-.hero-irs {
-  background: url("./assets/green-lime-half-bg.png") no-repeat center/cover;
+/* --- 1. Hero Section (Custom Gradient) --- */
+.hero-custom {
   position: relative;
-  padding: 100px 0;
+  padding: 120px 0;
   overflow: hidden;
+  background: url("./assets/green-lime-bg-full.png") no-repeat center/cover;
 }
-.hero-gradient-irs {
+.hero-blur-bg {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 50%;
-  /* Gradient: Yellow/Green vertical stripes */
-  background: linear-gradient(
-    90deg,
-    rgba(248, 250, 227, 0) 0%,
-    rgba(220, 240, 150, 0.3) 20%,
-    rgba(200, 230, 100, 0.6) 50%,
-    rgba(180, 210, 50, 0.8) 100%
-  );
+  bottom: 0;
+  width: 100%;
+  /* Gradient mimicking the cream-to-green blur in the image */
+  background: linear-gradient(90deg, #f8f9f3 40%, #7d965e 100%);
+  opacity: 0.8;
   z-index: 0;
-  pointer-events: none;
 }
 .hero-content {
   max-width: 600px;
@@ -223,7 +214,10 @@ h1 {
   padding: 16px 28px;
   border-radius: 6px;
   font-weight: 600;
-  text-align: center;
+}
+.btn-hero-secondary {
+  font-weight: 600;
+  color: #111;
 }
 
 /* --- 2. Intro Section (Equal Height) --- */
@@ -252,13 +246,13 @@ h1 {
 .icon-list-grid li {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
   font-size: 14px;
   font-weight: 600;
   color: #222;
 }
 .icon-circle-lime {
-  background: #dcee60;
+  background: var(--color-lime-accent);
   color: var(--color-dark-green);
   border-radius: 50%;
   width: 24px;
@@ -282,10 +276,7 @@ h1 {
   object-fit: cover;
 }
 
-/* --- 3. Directory Tabs --- */
-.state-irs-bg {
-  background: url("./assets/state-irs-bg.png") no-repeat center/cover;
-}
+/* --- 3 & 5. Grids (Capabilities & Industries) --- */
 .section-header {
   text-align: center;
   max-width: 700px;
@@ -294,112 +285,52 @@ h1 {
 .section-header h2 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.irs-tabs {
-  display: flex;
-  background: #fff;
-  padding: 8px;
-  flex-wrap: nowrap;
-  border-radius: 8px;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.tab-btn {
-  padding: 10px 24px;
-  background: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #555;
-  transition: 0.2s;
-}
-.tab-btn:hover {
-  background: #f0f0f0;
-}
-.tab-btn.active {
-  background: var(--color-darker-green);
-  color: #F0F299 !important;
-  border-color: var(--color-darker-green);
-}
-
-/* Tab Content Visibility Logic */
-.tab-content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.tab-content.active-tab {
-  display: block;
-  opacity: 1;
-}
-/* Default handled by .active-tab */
-
-.irs-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-.irs-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.irs-logo img {
-  height: 40px;
-  margin-bottom: 16px;
-  object-fit: contain;
-}
-.irs-card h3 {
-  font-size: 16px;
-  font-weight: 700;
   margin-bottom: 12px;
-  color: #111;
-  line-height: 1.4;
 }
-.irs-card p {
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 20px;
-  flex-grow: 1;
-  line-height: 1.6;
-}
-.btn-outline {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #999;
-  border-radius: 4px;
-  color: #333;
-  font-size: 13px;
-  font-weight: 600;
-  transition: 0.2s;
-}
-.btn-outline:hover {
-  border-color: var(--color-dark-green);
-  color: var(--color-dark-green);
-}
-
-/* --- 4. What You Can Do (Grid 3 reused) --- */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.feature-card-clean {
-  border: 1px solid #ddd;
+
+/* Capability Cards (Yellow background) */
+.card-yellow {
+  background: var(--color-yellow-card);
   border-radius: 12px;
-  padding: 24px;
+  padding: 32px;
+}
+.icon-box-trans {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.icon-box-trans svg {
+  width: 20px;
+  height: 20px;
+}
+.card-yellow h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.card-yellow p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Industry Cards (White background) */
+.card-white {
   background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 .icon-box-dark {
   width: 40px;
@@ -416,13 +347,53 @@ h1 {
   width: 20px;
   height: 20px;
 }
-.feature-card-clean h3 {
-  font-size: 16px;
+.card-white h3 {
+  font-size: 18px;
   font-weight: 700;
-  color: #111;
+  margin-bottom: 12px;
+}
+.card-white p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
 }
 
-/* --- 5. CTA --- */
+/* --- 4. Process Steps --- */
+.process-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.process-step {
+  flex: 1;
+}
+.step-header {
+  margin-bottom: 20px;
+}
+.step-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #eee;
+  line-height: 1;
+}
+.step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--color-lime-accent);
+  margin-top: 4px;
+}
+.process-step h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+}
+.process-step p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- 6. CTA --- */
 .cta-banner {
   background: var(--color-yellow-cta);
   border-radius: 24px;
@@ -441,14 +412,26 @@ h1 {
   font-size: 16px;
   color: #333;
 }
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
 .btn-dark {
   background: var(--color-dark-green);
   color: #fff !important;
   padding: 14px 28px;
   border-radius: 6px;
   font-weight: 600;
-  display: inline-block;
   font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.btn-text-link {
+  font-weight: 600;
+  color: #111;
+  padding: 14px 20px;
 }
 
 /* --- Footer --- */
@@ -520,11 +503,12 @@ h1 {
     height: auto;
   }
 
-  .irs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+  .process-grid {
+    flex-direction: column;
+    gap: 40px;
   }
 
   .footer-links-grid {
@@ -542,15 +526,5 @@ h1 {
   .nl-form input {
     width: 100%;
     margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .irs-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-buttons .btn-hero-primary {
-    width: 100%;
-    display: block;
   }
 }

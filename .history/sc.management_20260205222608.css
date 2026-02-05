@@ -4,7 +4,6 @@
   --color-text-main: #111;
   --color-text-light: #555;
   --color-dark-green: #4f6f2f;
-  --color-darker-green: #384e20;
   --color-lime-accent: #dcee60;
   --color-cream-bg: #f9f9f4;
   --color-yellow-cta: #eff69e;
@@ -53,9 +52,6 @@ img {
 .mb-6 {
   margin-bottom: 24px;
 }
-.mt-4 {
-  margin-top: 16px;
-}
 
 /* --- Navigation --- */
 .navbar {
@@ -101,8 +97,6 @@ img {
 .nav-menu {
   display: flex;
   gap: 32px;
-  margin: auto 10px;
-  white-space: nowrap;
 }
 .nav-link {
   font-size: 14px;
@@ -115,15 +109,14 @@ img {
   display: flex;
   gap: 20px;
   align-items: center;
-  white-space: nowrap;
 }
 .login-link {
   font-weight: 600;
   font-size: 14px;
 }
 .btn-nav {
-  background: #ffffff;
-  color: var(--color-dark-green);
+  background: var(--color-dark-green);
+  color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
   font-weight: 600;
@@ -156,26 +149,26 @@ img {
   gap: 10px;
 }
 
-/* --- 1. Hero Section (State IRS) --- */
-.hero-irs {
+/* --- 1. Hero Section (Supply Chain) --- */
+.hero-supply {
   background: url("./assets/green-lime-half-bg.png") no-repeat center/cover;
   position: relative;
   padding: 100px 0;
   overflow: hidden;
 }
-.hero-gradient-irs {
+.hero-gradient-supply {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 50%;
-  /* Gradient: Yellow/Green vertical stripes */
+  /* Gradient: Cream to Green/Yellow stripes */
   background: linear-gradient(
     90deg,
     rgba(248, 250, 227, 0) 0%,
-    rgba(220, 240, 150, 0.3) 20%,
-    rgba(200, 230, 100, 0.6) 50%,
-    rgba(180, 210, 50, 0.8) 100%
+    rgba(215, 233, 150, 0.2) 20%,
+    rgba(180, 210, 100, 0.5) 50%,
+    rgba(140, 180, 70, 0.8) 100%
   );
   z-index: 0;
   pointer-events: none;
@@ -223,16 +216,20 @@ h1 {
   padding: 16px 28px;
   border-radius: 6px;
   font-weight: 600;
-  text-align: center;
+}
+.btn-hero-secondary {
+  font-weight: 600;
+  color: #111;
 }
 
-/* --- 2. Intro Section (Equal Height) --- */
+/* --- 2 & 5. Intro & Integration (EQUAL HEIGHT LOGIC) --- */
 .equal-height-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: stretch;
+  align-items: stretch; /* Forces equal height columns */
 }
+
 .text-content {
   display: flex;
   flex-direction: column;
@@ -252,13 +249,13 @@ h1 {
 .icon-list-grid li {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: start;
   font-size: 14px;
   font-weight: 600;
   color: #222;
 }
 .icon-circle-lime {
-  background: #dcee60;
+  background: #ebf2af;
   color: var(--color-dark-green);
   border-radius: 50%;
   width: 24px;
@@ -279,127 +276,71 @@ h1 {
   border-radius: 12px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Fill the area without distortion */
 }
 
-/* --- 3. Directory Tabs --- */
-.state-irs-bg {
-  background: url("./assets/state-irs-bg.png") no-repeat center/cover;
+/* --- 3. Core Capabilities (Horizontal Scroll) --- */
+.capabilities-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
 }
-.section-header {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 60px;
-}
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
+.cap-intro h2 {
+  font-size: 36px;
+  font-weight: 800;
   margin-bottom: 16px;
 }
-
-.irs-tabs {
-  display: flex;
-  background: #fff;
-  padding: 8px;
-  flex-wrap: nowrap;
-  border-radius: 8px;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.tab-btn {
-  padding: 10px 24px;
-  background: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
+.cap-intro p {
+  font-size: 16px;
   color: #555;
+  margin-bottom: 32px;
+}
+.nav-arrows .arrow-btn {
+  background: #ebf2af;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
   transition: 0.2s;
 }
-.tab-btn:hover {
-  background: #f0f0f0;
-}
-.tab-btn.active {
-  background: var(--color-darker-green);
-  color: #F0F299 !important;
-  border-color: var(--color-darker-green);
+.nav-arrows .arrow-btn:hover {
+  background: #dce49e;
 }
 
-/* Tab Content Visibility Logic */
-.tab-content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.tab-content.active-tab {
-  display: block;
-  opacity: 1;
-}
-/* Default handled by .active-tab */
-
-.irs-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-.irs-card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+.cap-cards-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.irs-logo img {
-  height: 40px;
-  margin-bottom: 16px;
-  object-fit: contain;
+.cap-cards-wrapper::-webkit-scrollbar {
+  display: none;
 }
-.irs-card h3 {
-  font-size: 16px;
+
+.cap-card {
+  background: #e9f0e5;
+  border-radius: 12px;
+  padding: 32px;
+  min-width: 320px;
+  border: 1px solid #ddd;
+}
+.cap-card h3 {
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #111;
-  line-height: 1.4;
 }
-.irs-card p {
-  font-size: 13px;
-  color: #555;
+.cap-card p {
+  font-size: 14px;
+  color: #444;
   margin-bottom: 20px;
-  flex-grow: 1;
-  line-height: 1.6;
-}
-.btn-outline {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #999;
-  border-radius: 4px;
-  color: #333;
-  font-size: 13px;
-  font-weight: 600;
-  transition: 0.2s;
-}
-.btn-outline:hover {
-  border-color: var(--color-dark-green);
-  color: var(--color-dark-green);
-}
-
-/* --- 4. What You Can Do (Grid 3 reused) --- */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.feature-card-clean {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 24px;
-  background: #fff;
+  line-height: 1.5;
 }
 .icon-box-dark {
   width: 40px;
@@ -416,13 +357,64 @@ h1 {
   width: 20px;
   height: 20px;
 }
-.feature-card-clean h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #111;
+.check-list-small li {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+.check-circle-small {
+  background: #d4dfa8;
+  color: #333;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
 }
 
-/* --- 5. CTA --- */
+/* --- 4. Industries Grid --- */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card-outline {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  background: #fff;
+  transition: 0.3s;
+}
+.card-outline:hover {
+  border-color: var(--color-dark-green);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.card-outline h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card-outline p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* --- 6. CTA --- */
 .cta-banner {
   background: var(--color-yellow-cta);
   border-radius: 24px;
@@ -516,12 +508,18 @@ h1 {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  /* Mobile: Reset height for stacking */
   .image-content {
     height: auto;
+    min-height: auto;
+  }
+  .image-content img {
+    height: auto;
+    width: 100%;
   }
 
-  .irs-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .capabilities-layout {
+    grid-template-columns: 1fr;
   }
   .grid-3 {
     grid-template-columns: 1fr;
@@ -542,15 +540,5 @@ h1 {
   .nl-form input {
     width: 100%;
     margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .irs-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-buttons .btn-hero-primary {
-    width: 100%;
-    display: block;
   }
 }
