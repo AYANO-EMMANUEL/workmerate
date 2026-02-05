@@ -28,7 +28,7 @@
     --font-size-body-large: 16px;
     --font-size-body-medium: 16px;
     --font-size-body-sm: 12px;
-    --font-size-button: clamp(1rem, -0.375rem + 2vw, 1.2rem);
+    --font-size-button: clamp(0.5rem, -0.375rem + 2vw, 0.75rem);
     --font-size-input: 13px;
     --font-size-helper: 12px;
     
@@ -42,7 +42,7 @@
     --font-size-body-xlarge-mobile: 16px;
     --font-size-body-large-mobile: 15px;
     --font-size-body-medium-mobile: 14px;
-    --font-size-button-mobile: clamp(0.5rem, -0.125rem + 2vw, 1rem); 
+    --font-size-button-mobile: clamp(01rem, -0.125rem + 2vw, 1.3rem); 
     
     /* Line Heights */
     --line-height-display: 56px;

@@ -28,7 +28,7 @@
     --font-size-body-large: 16px;
     --font-size-body-medium: 16px;
     --font-size-body-sm: 12px;
-    --font-size-button: clamp(1rem, -0.375rem + 2vw, 1.2rem);
+    --font-size-button: clamp(0.5rem, -0.375rem + 2vw, 0.75rem);
     --font-size-input: 13px;
     --font-size-helper: 12px;
     
@@ -1276,6 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url("./assets/n-bg.png") no-repeat center center/cover;
     padding: 80px 0;
     color: #fff;
+    /*  */
 }
 
 .integration-container {
