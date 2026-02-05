@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="shared-nav-footer.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar navbar--index">
       <div class="container nav-wrapper">
         <a href="index.html" class="logo">
           <img src="./assets/brand-logo.png" alt="brand-logo" />
@@ -17,11 +17,7 @@
         <ul class="nav-menu desktop-only">
           <li><a href="agentic-ai.html" class="nav-link">Agentic AI</a></li>
           <li class="nav-item has-dropdown">
-            <a
-              href="services.html"
-              class="nav-link active"
-              aria-haspopup="true"
-            >
+            <a href="services.html" class="nav-link" aria-haspopup="true">
               Services
               <svg
                 class="chevron"
@@ -33,26 +29,123 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
-            <div class="dropdown">
-              <p class="dropdown-title">Services</p>
-              <ul class="dropdown-list two-col">
-                <li><a href="services.html">Tax Automation</a></li>
-                <li><a href="services.html">Compliance</a></li>
-                <li><a href="erp-pos.html">ERP &amp; POS Integrations</a></li>
-                <li>
-                  <a href="ar-reporting.html"
-                    >Audit &amp; Regulatory Reporting</a
-                  >
-                </li>
-                <li><a href="ar-advisory.html">Advisory &amp; Risk</a></li>
-                <li>
-                  <a href="regulatory-engagement.html">Regulatory Engagement</a>
-                </li>
-                <li><a href="managed.html">Managed Services</a></li>
-                <li>
-                  <a href="advanced-intelligence.html">Advanced Intelligence</a>
-                </li>
-              </ul>
+            <div class="dropdown mega-dropdown">
+              <div class="mega-grid">
+                <div class="mega-list">
+                  <a class="mega-item" href="services.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Tax Automation &amp; Compliance</span>
+                        <span class="mega-subtitle">Primary systems and automation layer</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="ar-reporting.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Audit &amp; Regulatory Reporting</span>
+                        <span class="mega-subtitle">Assurance and statutory services</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="regulatory-engagement.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Regulatory Engagement</span>
+                        <span class="mega-subtitle">Onboarding, certifications, and liaison</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="advanced-intelligence.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Advanced Intelligence</span>
+                        <span class="mega-subtitle">AI, insights, and continuous monitoring</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-list">
+                  <a class="mega-item" href="erp-pos.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">ERP &amp; POS Integrations</span>
+                        <span class="mega-subtitle">Platform and infrastructure services</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="ar-advisory.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Advisory &amp; Risk</span>
+                        <span class="mega-subtitle">Strategy, planning, and risk management</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="managed.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Managed Services</span>
+                        <span class="mega-subtitle">Ongoing operations and capacity support</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-card">
+                  <div class="mega-card-visual"></div>
+                  <p class="mega-card-title">Need the perfect service? We can help!</p>
+                  <a class="mega-card-btn" href="#">Talk to an Expert</a>
+                </div>
+              </div>
             </div>
           </li>
           <li class="nav-item has-dropdown">
@@ -68,30 +161,138 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
-            <div class="dropdown">
-              <p class="dropdown-title">Modules</p>
-              <ul class="dropdown-list two-col">
-                <li><a href="hr.html">Human Resources Management</a></li>
-                <li>
-                  <a href="financial-management.html">Financial Management</a>
-                </li>
-                <li><a href="#">Marketing Automation</a></li>
-                <li><a href="tax-management.html">Tax Management</a></li>
-                <li>
-                  <a href="project-management.html">Project Management</a>
-                </li>
-                <li>
-                  <a href="productivity-management.html"
-                    >Productivity Management</a
-                  >
-                </li>
-                <li>
-                  <a href="sc-management.html">Supply Chain Management</a>
-                </li>
-                <li>
-                  <a href="custom-modules.html">Custom-Module Management</a>
-                </li>
-              </ul>
+            <div class="dropdown mega-dropdown">
+              <div class="mega-grid">
+                <div class="mega-list">
+                  <a class="mega-item" href="hr.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Human Resources Management</span>
+                        <span class="mega-subtitle">Empower your workforce from one system</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="#">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Marketing Automation</span>
+                        <span class="mega-subtitle">Transform interactions into growth</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="project-management.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Project Management</span>
+                        <span class="mega-subtitle">Plan smart, execute fast, deliver confidently</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="sc-management.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Supply Chain Management</span>
+                        <span class="mega-subtitle">Streamline operations from start to finish</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-list">
+                  <a class="mega-item" href="financial-management.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Financial Management</span>
+                        <span class="mega-subtitle">Gain financial control and visibility</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="tax-management.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Tax Management</span>
+                        <span class="mega-subtitle">Simple automated tax management</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="productivity-management.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Productivity Management</span>
+                        <span class="mega-subtitle">Empower teams to collaborate better</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="custom-modules.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Custom Module Development</span>
+                        <span class="mega-subtitle">We provide tailored modules for your sector.</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-card">
+                  <div class="mega-card-visual"></div>
+                  <p class="mega-card-title">Want to see these modules in action?</p>
+                  <a class="mega-card-btn" href="#">Book a Demo</a>
+                </div>
+              </div>
             </div>
           </li>
           <li><a href="pricing.html" class="nav-link">Pricing</a></li>
@@ -108,19 +309,93 @@
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
-            <div class="dropdown">
-              <p class="dropdown-title">Resources</p>
-              <ul class="dropdown-list one-col">
-                <li>
-                  <a href="compliance-calculator.html"
-                    >Compliance Loss Calculator</a
-                  >
-                </li>
-                <li><a href="tax-laws.html">Tax Laws</a></li>
-                <li><a href="state-irs.html">State IRS</a></li>
-                <li><a href="learning.html">Learning</a></li>
-                <li><a href="tax-calendar.html">Tax Calendar</a></li>
-              </ul>
+            <div class="dropdown mega-dropdown">
+              <div class="mega-grid">
+                <div class="mega-list">
+                  <a class="mega-item" href="compliance-calculator.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Compliance Loss Calculator</span>
+                        <span class="mega-subtitle">Estimate loss from tax gaps.</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="tax-calendar.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Tax Calendar</span>
+                        <span class="mega-subtitle">Transform interactions into growth</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="learning.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Learning</span>
+                        <span class="mega-subtitle">Plan smart, execute fast, deliver confidently</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-list">
+                  <a class="mega-item" href="tax-laws.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">Tax Laws</span>
+                        <span class="mega-subtitle">Learn Nigeria's tax system.</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                  <a class="mega-item" href="state-irs.html">
+                    <span class="mega-item-left">
+                      <span class="mega-icon"></span>
+                      <span class="mega-text">
+                        <span class="mega-title">State IRS</span>
+                        <span class="mega-subtitle">Find State Tax Authorities</span>
+                      </span>
+                    </span>
+                    <span class="mega-arrow">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="13 6 19 12 13 18"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="mega-card">
+                  <div class="mega-card-visual"></div>
+                  <p class="mega-card-title">Need more information?</p>
+                  <a class="mega-card-btn" href="contact-us.html">Contact Us</a>
+                </div>
+              </div>
             </div>
           </li>
           <li><a href="about.html" class="nav-link">About us</a></li>
@@ -1151,5 +1426,6 @@
 </script>
 </body>
 </html>
+
 
 

@@ -935,6 +935,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: 16px;
     z-index: 2;
+    padding-right: 48px;
 }
 
 .cta-title {
