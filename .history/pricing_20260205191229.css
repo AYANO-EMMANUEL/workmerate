@@ -265,7 +265,7 @@ ul {
   display: block;
   width: 100%;
   background: var(--color-dark-green);
-  color: #fff !important;
+  color: #fff;
   text-align: center;
   padding: 10px;
   border-radius: 4px;

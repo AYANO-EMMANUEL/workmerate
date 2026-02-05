@@ -83,13 +83,13 @@ body {
 }
 
 .btn-schedule {
-  background: var(--primary-green) !important;
-  color: var(--white) !important;
+  background: var(--primary-green);
+  color: var(--white);
 }
 
 .btn-schedule:hover {
-  background: var(--white) !important;
-  color: var(--text-dark) !important;
+  background: var(--white);
+  color: var(--text-dark);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(74, 103, 65, 0.3);
 }
